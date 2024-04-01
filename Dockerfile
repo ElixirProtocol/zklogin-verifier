@@ -12,11 +12,11 @@ ARG APP_NAME=zklogin-verifier
 ################################################################################
 # xx is a helper for cross-compilation.
 # See https://github.com/tonistiigi/xx/ for more information.
-FROM --platform=$BUILDPLATFORM tonistiigi/xx:1.3.0 AS xx
+FROM --platform=linux/amd64 tonistiigi/xx:1.3.0 AS xx
 
 ################################################################################
 # Create a stage for building the application.
-FROM --platform=$BUILDPLATFORM rust:${RUST_VERSION}-alpine AS build
+FROM --platform=linux/amd64 rust:${RUST_VERSION}-alpine AS build
 ARG APP_NAME
 WORKDIR /app
 
