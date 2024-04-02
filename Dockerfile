@@ -10,7 +10,6 @@ ARG RUST_VERSION=1.70.0
 ARG APP_NAME=zklogin-verifier
 
 ################################################################################
-# Create a stage for building the application.
 
 FROM rust:${RUST_VERSION}-alpine AS build
 ARG APP_NAME
