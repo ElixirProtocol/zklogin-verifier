@@ -1,0 +1,13 @@
+steps:
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      [
+        "buildx",
+        "build"
+        "-t",
+        "asia-docker.pkg.dev/$PROJECT_ID/elixir-points/zklogin-verifier:1.0",
+        ".",
+      ]
+    automapSubstitutions: true
+images:
+  - "asia-docker.pkg.dev/$PROJECT_ID/elixir-points/zklogin-verifier:1.0"
